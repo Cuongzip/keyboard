@@ -25,7 +25,13 @@
     <div class="wrapper">
       <header>
         <div class="header-inner grid">
-          <img class="header-logo" src="./images/logos/logo-black.png" alt="" />
+          <a href="index.html">
+            <img
+              class="header-logo"
+              src="./images/logos/logo-black.png"
+              alt=""
+            />
+          </a>
           <div class="header-search">
             <input placeholder="Tìm Kiếm" />
             <div class="header-search-icon">
@@ -58,7 +64,7 @@
               </ul>
             </li>
             <li class="header-nav-item">
-              <span>Giỏ hàng</span>
+              <span>user name</span>
               <i class="fa-solid fa-circle-user"></i>
               <ul class="header-nav-item-popup">
                 <li>
@@ -76,31 +82,37 @@
         <div class="carousel grid">
           <ul class="carousel-images">
             <li
-              style="transition: all 1s ease-in-out"
-              class="carousel-images-item"
+              style="margin-left: -100%; transition: all 0.4s ease-in-out"
+              class="carousel-image carousel-image-clone"
             >
+              <img src="./images/banner/banner-8.jpg" />
+            </li>
+            <li class="carousel-image">
               <img src="./images/banner/banner-1.jpg" />
             </li>
-            <li class="carousel-images-item">
+            <li class="carousel-image">
               <img src="./images/banner/banner-2.jpg" />
             </li>
-            <li class="carousel-images-item">
+            <li class="carousel-image">
               <img src="./images/banner/banner-3.jpg" />
             </li>
-            <li class="carousel-images-item">
+            <li class="carousel-image">
               <img src="./images/banner/banner-4.jpg" />
             </li>
-            <li class="carousel-images-item">
+            <li class="carousel-image">
               <img src="./images/banner/banner-5.jpg" />
             </li>
-            <li class="carousel-images-item">
+            <li class="carousel-image">
               <img src="./images/banner/banner-6.jpg" />
             </li>
-            <li class="carousel-images-item">
+            <li class="carousel-image">
               <img src="./images/banner/banner-7.jpg" />
             </li>
-            <li class="carousel-images-item">
+            <li class="carousel-image">
               <img src="./images/banner/banner-8.jpg" />
+            </li>
+            <li class="carousel-image carousel-image-clone">
+              <img src="./images/banner/banner-1.jpg" />
             </li>
           </ul>
 
@@ -110,60 +122,55 @@
           <button class="carousel-btn carousel-btn-right">
             <i class="fa-solid fa-chevron-right"></i>
           </button>
+          <ul class="carousel-dots"></ul>
         </div>
         <!-- nav bar -->
         <nav class="grid">
           <ul class="body-nav">
             <li class="body-nav-item">
-              <a class="active" href="index.html"> Keycap </a>
+              <a class="active" href="index.html">Keyboards</a>
             </li>
             <li class="body-nav-item">
-              <a href="index.html"> Kit </a>
+              <a href="index.html"> Keycap </a>
+            </li>
+            <li class="body-nav-item">
+              <a href="index.html"> Kits </a>
             </li>
           </ul>
         </nav>
         <!-- product -->
         <ul class="products grid">
-          <li class="product">
-            <div class="product-wrap-img">
-              <img src="./images/kits/FLESPORT-CMK87-BLACK-kit-1.jpg" />
-            </div>
-            <h3 class="product-title">FLESPORT-CMK87</h3>
-            <p class="product-description">
-              Bàn phím FL-Esports CMK87 SAM Polar Night Black 3 Mode là phiên
-              bản hỗ trợ 3 chế độ kết nối, khác với bản 1 mode chỉ có kết nối
-              qua cáp USB. Switch Kailh Box White và Red được sử dụng trên bản 3
-              Mode, khi bản 1 mode chỉ có Switch Kailh Box Cool Mint.
-            </p>
-            <div class="product-footer">
-              <div class="product-footer-evaluate">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
+          <li>
+            <a class="product" href="detail.html">
+              <div class="product-wrap-images">
+                <img src="./images/kits/GINKGO65-PRO/6.jpg" />
+                <img src="./images/kits/GINKGO65-PRO/3.jpg" />
               </div>
-              <div class="product-footer-like">
-                <span>Yêu thích</span>
-                <div class="product-footer-like-icons">
-                  <i class="fa-regular fa-heart"></i>
-                  <i class="fa-solid fa-heart"></i>
-                </div>
+
+              <span class="product-sub-title"> Kit Phím Cơ </span>
+              <h3 class="product-title">GINKGO65 PRO</h3>
+              <div class="product-price">
+                <span class="product-price-sale"> $259.00 </span>
+                <span class="product-price-origin"> $299.00 </span>
               </div>
-            </div>
+            </a>
           </li>
-          <li class="product">
-            <div class="product-wrap-img">
-              <img src="./images/kits/K210-MK870-kit-2.jpg" />
-            </div>
-            <h3 class="product-title">FLESPORT-CMK87</h3>
-            <p class="product-description">
-              Bàn phím FL-Esports CMK87 SAM Polar Night Black 3 Mode là phiên
-              bản hỗ trợ 3 chế độ kết nối, khác với bản 1 mode chỉ có kết nối
-              qua cáp USB. Switch Kailh Box White và Red được sử dụng trên bản 3
-              Mode, khi bản 1 mode chỉ có Switch Kailh Box Cool Mint.
-            </p>
-            <div class="product-footer">
+          <li>
+            <a class="product" href="index.html">
+              <div class="product-wrap-images">
+                <img src="./images/kits/Maze-64/white_black_1.jpg" />
+                <img src="./images/kits/Maze-64/white_1_1.jpg" />
+              </div>
+
+              <span class="product-sub-title"> Kit Phím Cơ </span>
+              <h3 class="product-title">Maze 64</h3>
+              <div class="product-price">
+                <span class="product-price-sale"> $115.00 </span>
+                <span class="product-price-origin"> $120.00 </span>
+              </div>
+            </a>
+
+            <!-- <div class="product-footer">
               <div class="product-footer-evaluate">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -178,123 +185,152 @@
                   <i class="fa-solid fa-heart"></i>
                 </div>
               </div>
-            </div>
+            </div> -->
           </li>
-          <li class="product">
-            <div class="product-wrap-img">
-              <img src="./images/kits/K210-MK870-kit-2.jpg" />
-            </div>
-            <h3 class="product-title">FLESPORT-CMK87</h3>
-            <p class="product-description">
-              Bàn phím FL-Esports CMK87 SAM Polar Night Black 3 Mode là phiên
-              bản hỗ trợ 3 chế độ kết nối, khác với bản 1 mode chỉ có kết nối
-              qua cáp USB. Switch Kailh Box White và Red được sử dụng trên bản 3
-              Mode, khi bản 1 mode chỉ có Switch Kailh Box Cool Mint.
-            </p>
-            <div class="product-footer">
-              <div class="product-footer-evaluate">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
+
+          <li>
+            <a class="product" href="index.html">
+              <div class="product-wrap-images">
+                <img src="./images/kits/Aurora-x-Zen-Pond/ZenPond_01.jpg" />
+                <img src="./images/kits/Aurora-x-Zen-Pond/ZenPond_07.png" />
               </div>
-              <div class="product-footer-like">
-                <span>Yêu thích</span>
-                <div class="product-footer-like-icons">
-                  <i class="fa-regular fa-heart"></i>
-                  <i class="fa-solid fa-heart"></i>
-                </div>
+
+              <span class="product-sub-title"> Kit Phím Cơ </span>
+              <h3 class="product-title">Aurora x Zen Pond</h3>
+              <div class="product-price">
+                <span class="product-price-sale">$210.00 </span>
+                <span class="product-price-origin"> $220.00 </span>
               </div>
-            </div>
+            </a>
           </li>
-          <li class="product">
-            <div class="product-wrap-img">
-              <img src="./images/kits/K210-MK870-kit-2.jpg" />
-            </div>
-            <h3 class="product-title">FLESPORT-CMK87</h3>
-            <p class="product-description">
-              Bàn phím FL-Esports CMK87 SAM Polar Night Black 3 Mode là phiên
-              bản hỗ trợ 3 chế độ kết nối, khác với bản 1 mode chỉ có kết nối
-              qua cáp USB. Switch Kailh Box White và Red được sử dụng trên bản 3
-              Mode, khi bản 1 mode chỉ có Switch Kailh Box Cool Mint.
-            </p>
-            <div class="product-footer">
-              <div class="product-footer-evaluate">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
+          <li>
+            <a class="product" href="index.html">
+              <div class="product-wrap-images">
+                <img src="./images/kits/Promise87-Bespoke-Edition/Red_6.jpg" />
+                <img src="./images/kits/Promise87-Bespoke-Edition/Red_7.jpg" />
               </div>
-              <div class="product-footer-like">
-                <span>Yêu thích</span>
-                <div class="product-footer-like-icons">
-                  <i class="fa-regular fa-heart"></i>
-                  <i class="fa-solid fa-heart"></i>
-                </div>
+
+              <span class="product-sub-title"> Kit Phím Cơ </span>
+              <h3 class="product-title">Promise87 Bespoke Edition</h3>
+              <div class="product-price">
+                <span class="product-price-sale">$540.00 </span>
+                <span class="product-price-origin">$580.00 </span>
               </div>
-            </div>
+            </a>
           </li>
-          <li class="product">
-            <div class="product-wrap-img">
-              <img src="./images/kits/K210-MK870-kit-2.jpg" />
-            </div>
-            <h3 class="product-title">FLESPORT-CMK87</h3>
-            <p class="product-description">
-              Bàn phím FL-Esports CMK87 SAM Polar Night Black 3 Mode là phiên
-              bản hỗ trợ 3 chế độ kết nối, khác với bản 1 mode chỉ có kết nối
-              qua cáp USB. Switch Kailh Box White và Red được sử dụng trên bản 3
-              Mode, khi bản 1 mode chỉ có Switch Kailh Box Cool Mint.
-            </p>
-            <div class="product-footer">
-              <div class="product-footer-evaluate">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
+          <li>
+            <a class="product" href="index.html">
+              <div class="product-wrap-images">
+                <img src="./images/kits/Balance/q5b94I9.jpg" />
+                <img src="./images/kits/Balance/5CCXvP4.jpg" />
               </div>
-              <div class="product-footer-like">
-                <span>Yêu thích</span>
-                <div class="product-footer-like-icons">
-                  <i class="fa-regular fa-heart"></i>
-                  <i class="fa-solid fa-heart"></i>
-                </div>
+
+              <span class="product-sub-title"> Kit Phím Cơ </span>
+              <h3 class="product-title">Balance</h3>
+              <div class="product-price">
+                <span class="product-price-sale">$465.00</span>
+                <span class="product-price-origin"> $500.00 </span>
               </div>
-            </div>
+            </a>
           </li>
-          <li class="product">
-            <div class="product-wrap-img">
-              <img src="./images/kits/K210-MK870-kit-2.jpg" />
-            </div>
-            <h3 class="product-title">FLESPORT-CMK87</h3>
-            <p class="product-description">
-              Bàn phím FL-Esports CMK87 SAM Polar Night Black 3 Mode là phiên
-              bản hỗ trợ 3 chế độ kết nối, khác với bản 1 mode chỉ có kết nối
-              qua cáp USB. Switch Kailh Box White và Red được sử dụng trên bản 3
-              Mode, khi bản 1 mode chỉ có Switch Kailh Box Cool Mint.
-            </p>
-            <div class="product-footer">
-              <div class="product-footer-evaluate">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
+          <li>
+            <a class="product" href="index.html">
+              <div class="product-wrap-images">
+                <img src="./images/kits/Ikki68/1.jpg" />
+                <img src="./images/kits/Ikki68/2.jpg" />
               </div>
-              <div class="product-footer-like">
-                <span>Yêu thích</span>
-                <div class="product-footer-like-icons">
-                  <i class="fa-regular fa-heart"></i>
-                  <i class="fa-solid fa-heart"></i>
-                </div>
+
+              <span class="product-sub-title"> Kit Phím Cơ </span>
+              <h3 class="product-title">Ikki68</h3>
+              <div class="product-price">
+                <span class="product-price-sale">$279.00</span>
+                <span class="product-price-origin">$299.00 </span>
               </div>
-            </div>
+            </a>
           </li>
         </ul>
       </main>
-      <footer>footer</footer>
+      <footer>
+        <div class="footer-inner grid">
+          <div class="column">
+            <img
+              class="column-logo"
+              src="./images/logos/logo-black.png"
+              alt="logo"
+            />
+            <p class="column-slogan title">
+              Bàn Phím Hoàn Hảo Cho Mọi Cú Click
+            </p>
+          </div>
+          <div class="column">
+            <h3 class="column-title title">Menu</h3>
+            <ul>
+              <li class="column-list-item">
+                <a href="inde.html">
+                  <i class="fa-solid fa-house"></i>
+                  <span>Trang chủ</span>
+                </a>
+              </li>
+              <li class="column-list-item">
+                <a href="cart.html">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <span>Giỏ hàng</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="column">
+            <h3 class="column-title title">Mạng xã hội</h3>
+            <ul>
+              <li class="column-list-item">
+                <a href="https://www.instagram.com/cuongzip2k6/">
+                  <i class="fa-brands fa-square-instagram"></i>
+                  <span>cuognzip2k6</span>
+                </a>
+              </li>
+              <li class="column-list-item">
+                <a
+                  href="https://www.facebook.com/profile.php?id=100069563275346"
+                >
+                  <i class="fa-brands fa-facebook"></i>
+                  <span>Huynh Cuong</span>
+                </a>
+              </li>
+              <li class="column-list-item">
+                <a
+                  href="https://www.youtube.com/channel/UCxsq55Bayq0bhLRjBAz6xeA"
+                >
+                  <i class="fa-brands fa-youtube"></i>
+                  <span>Cường Huỳnh </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="column">
+            <h3 class="column-title title">Liên lạc</h3>
+            <ul>
+              <li class="column-list-item">
+                <a href="tel: 000000">
+                  <i class="fa-solid fa-phone"></i>
+                  <span>0349156614</span>
+                </a>
+              </li>
+              <li class="column-list-item">
+                <a href="mailto:cuongzip2k6@gmail.com">
+                  <i class="fa-solid fa-envelope"></i>
+                  <span> cuognzip2k6@gmail.com </span>
+                </a>
+              </li>
+              <li class="column-list-item">
+                <a href="#">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span> Phước Thiền, Đồng Nai</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </div>
     <script src="./js/index.js"></script>
   </body>

@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/responsive.css" />
     <!-- reset default css -->
     <link
       rel="stylesheet"
@@ -25,24 +26,25 @@
     <div class="wrapper">
       <header>
         <div class="header-inner grid">
-          <a href="index.html">
+          <a class="header-wrap-logo href" href="index.html">
             <img
               class="header-logo"
               src="./images/logos/logo-black.png"
               alt=""
             />
           </a>
+
           <div class="header-search">
             <input placeholder="Tìm Kiếm" />
             <div class="header-search-icon">
               <i class="fa-solid fa-magnifying-glass"></i>
             </div>
           </div>
-          <ul class="header-nav">
-            <li class="header-nav-item">
+          <div class="header-right">
+            <div class="header-right-item">
               <span>Danh mục</span>
               <i class="fa-solid fa-list"></i>
-              <ul class="header-nav-item-popup">
+              <ul class="header-right-item-popup">
                 <li>
                   <a> item1 </a>
                 </li>
@@ -50,11 +52,11 @@
                   <a> item2 </a>
                 </li>
               </ul>
-            </li>
-            <li class="header-nav-item">
+            </div>
+            <div class="header-right-item">
               <span>Giỏ hàng</span>
               <i class="fa-solid fa-cart-shopping"></i>
-              <ul class="header-nav-item-popup">
+              <ul class="header-right-item-popup">
                 <li>
                   <a> item1 </a>
                 </li>
@@ -62,11 +64,11 @@
                   <a> item2 </a>
                 </li>
               </ul>
-            </li>
-            <li class="header-nav-item">
-              <span>user name</span>
+            </div>
+            <div class="header-right-item header-right-item-column">
               <i class="fa-solid fa-circle-user"></i>
-              <ul class="header-nav-item-popup">
+              <span>user name</span>
+              <ul class="header-right-item-popup">
                 <li>
                   <a> item1 </a>
                 </li>
@@ -74,12 +76,132 @@
                   <a> item2 </a>
                 </li>
               </ul>
-            </li>
-          </ul>
+            </div>
+          </div>
+          <!-- responsive -->
+          <div class="header-wrap-sidebar">
+            <i class="header-wrap-sidebar-icon fa-solid fa-list"></i>
+            <div class="header-modal">
+              <div class="header-sidebar">
+                <div class="header-sidebar-search">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <input placeholder="Tìm Kiếm" />
+                </div>
+                <ul class="header-sidebar-menu">
+                  <li class="header-sidebar-menu-item">
+                    <div class="header-sidebar-menu-item-click">
+                      <div class="header-sidebar-menu-item-click-left">
+                        <i class="fa-solid fa-list"></i>
+                        <span>Danh mục</span>
+                      </div>
+                      <div class="header-sidebar-menu-item-click-right">
+                        <i class="fa-solid fa-plus show"></i>
+                        <i class="fa-solid fa-minus"></i>
+                      </div>
+                    </div>
+                    <ul class="header-sidebar-item-sub-menu">
+                      <li>
+                        <a
+                          class="header-sidebar-item-sub-menu-item"
+                          href="index.html"
+                        >
+                          Keyboard
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="header-sidebar-item-sub-menu-item"
+                          href="index.html"
+                        >
+                          Keycap
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="header-sidebar-item-sub-menu-item"
+                          href="index.html"
+                        >
+                          Switch
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="header-sidebar-item-sub-menu-item"
+                          href="index.html"
+                        >
+                          Tool
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="header-sidebar-menu-item">
+                    <div class="header-sidebar-menu-item-click">
+                      <div class="header-sidebar-menu-item-click-left">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>Giỏ hàng</span>
+                      </div>
+                      <div class="header-sidebar-menu-item-click-right">
+                        <i class="fa-solid fa-plus show"></i>
+                        <i class="fa-solid fa-minus"></i>
+                      </div>
+                    </div>
+                    <ul class="header-sidebar-item-sub-menu">
+                      <li>
+                        <a
+                          class="header-sidebar-item-sub-menu-item"
+                          href="index.html"
+                        >
+                          item1
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="header-sidebar-item-sub-menu-item"
+                          href="index.html"
+                        >
+                          item2
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="header-sidebar-menu-item">
+                    <div class="header-sidebar-menu-item-click">
+                      <div class="header-sidebar-menu-item-click-left">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <span>user name</span>
+                      </div>
+                      <div class="header-sidebar-menu-item-click-right">
+                        <i class="fa-solid fa-plus show"></i>
+                        <i class="fa-solid fa-minus"></i>
+                      </div>
+                    </div>
+                    <ul class="header-sidebar-item-sub-menu">
+                      <li>
+                        <a
+                          class="header-sidebar-item-sub-menu-item"
+                          href="index.html"
+                        >
+                          Hồ sơ
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="header-sidebar-item-sub-menu-item"
+                          href="index.html"
+                        >
+                          Cài đặt
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
-      <main>
-        <div class="carousel grid">
+      <main class="grid">
+        <div class="carousel">
           <ul class="carousel-images">
             <li
               style="margin-left: -100%; transition: all 0.4s ease-in-out"
@@ -125,7 +247,7 @@
           <ul class="carousel-dots"></ul>
         </div>
         <!-- nav bar -->
-        <nav class="grid">
+        <nav>
           <ul class="body-nav">
             <li class="body-nav-item">
               <a class="active" href="index.html">Keyboards</a>
@@ -139,7 +261,7 @@
           </ul>
         </nav>
         <!-- product -->
-        <ul class="products grid">
+        <ul class="products">
           <li>
             <a class="product" href="detail.html">
               <div class="product-wrap-images">
@@ -156,7 +278,7 @@
             </a>
           </li>
           <li>
-            <a class="product" href="index.html">
+            <a class="product" href="detail.html">
               <div class="product-wrap-images">
                 <img src="./images/kits/Maze-64/white_black_1.jpg" />
                 <img src="./images/kits/Maze-64/white_1_1.jpg" />
@@ -189,7 +311,7 @@
           </li>
 
           <li>
-            <a class="product" href="index.html">
+            <a class="product" href="detail.html">
               <div class="product-wrap-images">
                 <img src="./images/kits/Aurora-x-Zen-Pond/ZenPond_01.jpg" />
                 <img src="./images/kits/Aurora-x-Zen-Pond/ZenPond_07.png" />
@@ -204,7 +326,7 @@
             </a>
           </li>
           <li>
-            <a class="product" href="index.html">
+            <a class="product" href="detail.html">
               <div class="product-wrap-images">
                 <img src="./images/kits/Promise87-Bespoke-Edition/Red_6.jpg" />
                 <img src="./images/kits/Promise87-Bespoke-Edition/Red_7.jpg" />
@@ -219,7 +341,7 @@
             </a>
           </li>
           <li>
-            <a class="product" href="index.html">
+            <a class="product" href="detail.html">
               <div class="product-wrap-images">
                 <img src="./images/kits/Balance/q5b94I9.jpg" />
                 <img src="./images/kits/Balance/5CCXvP4.jpg" />
@@ -234,7 +356,7 @@
             </a>
           </li>
           <li>
-            <a class="product" href="index.html">
+            <a class="product" href="detail.html">
               <div class="product-wrap-images">
                 <img src="./images/kits/Ikki68/1.jpg" />
                 <img src="./images/kits/Ikki68/2.jpg" />
@@ -253,11 +375,13 @@
       <footer>
         <div class="footer-inner grid">
           <div class="column">
-            <img
-              class="column-logo"
-              src="./images/logos/logo-black.png"
-              alt="logo"
-            />
+            <a href="index.html">
+              <img
+                class="column-logo"
+                src="./images/logos/logo-black.png"
+                alt="logo"
+              />
+            </a>
             <p class="column-slogan title">
               Bàn Phím Hoàn Hảo Cho Mọi Cú Click
             </p>
@@ -333,5 +457,6 @@
       </footer>
     </div>
     <script src="./js/index.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

@@ -1,29 +1,34 @@
 .top{
     display: flex;
     flex-wrap: wrap;
-   
-    margin-top: 70px;
+    margin-top: 40px;
 }
 .top-left{
-    flex: 1.6;
+    flex: 1.48;
     margin-right: 20px;
-    min-width: 400px;
-}
-.top-right{
-   flex: 1;
-   min-width: 490px;
-}
-.top-left-wrap-big-img{
-    width: 100%;
-    border-radius:20px ;
-    overflow: hidden;
-    
-}
-.top-left-wrap-big-img img{
-    display: block;
-    width: 100%;
+    min-width: 459px;
 }
 
+.top-left-wrap-big-img{
+    position: relative;
+    width: 100%;
+    border-radius:20px ;
+    padding-top: 55%;
+    overflow: hidden;
+}
+.top-left-wrap-big-img img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+.top-right{
+    flex: 1;
+    min-width: 459px;
+ }
 .top-right-title{
     font-size: 2.8rem;
    line-height: 40px;
@@ -123,16 +128,23 @@
     overflow: hidden;
 }
 .carousel-image{
+    position: relative;
     width: 25%;
-    height: 90px;
+    padding-top: 14%;
     flex-shrink: 0;
-    padding: 0 10px;
+    overflow: hidden;
+
 }
 .carousel-image img{
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 2.5%;
+    right: 0;
     border-radius: 10px;
-    
+    width: 95%;
+    height: 100%;
+
 }
 .active-img{
     border: 1px solid red;
@@ -239,9 +251,7 @@ th,td{
     display: none;
     animation: hideToShow 0.3s ease-in-out;
 }
-.show{
-    display: block;
-}
+
 
 @keyframes hideToShow {
     from{
@@ -260,6 +270,7 @@ th,td{
  }
 .products{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
  }
 .products-suggest-title{

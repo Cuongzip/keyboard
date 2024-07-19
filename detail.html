@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GINKGO65 PRO KEYBOARD KIT</title>
+    <title>Keyboard</title>
 
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="stylesheet" href="./styles/detail.css" />
+    <link rel="stylesheet" href="./styles/responsive.css" />
     <!-- reset default css -->
     <link
       rel="stylesheet"
@@ -25,8 +26,12 @@
     <div class="wrapper">
       <header>
         <div class="header-inner grid">
-          <a class="header-logo" href="index.html">
-            <img src="./images/logos/logo-black.png" alt="" />
+          <a class="header-wrap-logo href" href="index.html">
+            <img
+              class="header-logo"
+              src="./images/logos/logo-black.png"
+              alt=""
+            />
           </a>
           <div class="header-search">
             <input placeholder="Tìm Kiếm" />
@@ -34,11 +39,11 @@
               <i class="fa-solid fa-magnifying-glass"></i>
             </div>
           </div>
-          <ul class="header-nav">
-            <li class="header-nav-item">
+          <div class="header-right">
+            <div class="header-right-item">
               <span>Danh mục</span>
               <i class="fa-solid fa-list"></i>
-              <ul class="header-nav-item-popup">
+              <ul class="header-right-item-popup">
                 <li>
                   <a> item1 </a>
                 </li>
@@ -46,11 +51,11 @@
                   <a> item2 </a>
                 </li>
               </ul>
-            </li>
-            <li class="header-nav-item">
+            </div>
+            <div class="header-right-item">
               <span>Giỏ hàng</span>
               <i class="fa-solid fa-cart-shopping"></i>
-              <ul class="header-nav-item-popup">
+              <ul class="header-right-item-popup">
                 <li>
                   <a> item1 </a>
                 </li>
@@ -58,11 +63,11 @@
                   <a> item2 </a>
                 </li>
               </ul>
-            </li>
-            <li class="header-nav-item">
-              <span>user name</span>
+            </div>
+            <div class="header-right-item header-right-item-column">
               <i class="fa-solid fa-circle-user"></i>
-              <ul class="header-nav-item-popup">
+              <span>user name</span>
+              <ul class="header-right-item-popup">
                 <li>
                   <a> item1 </a>
                 </li>
@@ -70,11 +75,130 @@
                   <a> item2 </a>
                 </li>
               </ul>
-            </li>
-          </ul>
+            </div>
+          </div>
+          <!-- responsive -->
+          <div class="header-wrap-sidebar">
+            <i class="header-wrap-sidebar-icon fa-solid fa-list"></i>
+            <div class="header-modal">
+              <div class="header-sidebar">
+                <div class="header-sidebar-search">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <input placeholder="Tìm Kiếm" />
+                </div>
+                <ul class="header-sidebar-menu">
+                  <li class="header-sidebar-menu-item">
+                    <div class="header-sidebar-menu-item-click">
+                      <div class="header-sidebar-menu-item-click-left">
+                        <i class="fa-solid fa-list"></i>
+                        <span>Danh mục</span>
+                      </div>
+                      <div class="header-sidebar-menu-item-click-right">
+                        <i class="fa-solid fa-plus show"></i>
+                        <i class="fa-solid fa-minus"></i>
+                      </div>
+                    </div>
+                    <ul class="header-sidebar-item-sub-menu">
+                      <li>
+                        <a
+                          class="header-sidebar-item-sub-menu-item"
+                          href="index.html"
+                        >
+                          Keyboard
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="header-sidebar-item-sub-menu-item"
+                          href="index.html"
+                        >
+                          Keycap
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="header-sidebar-item-sub-menu-item"
+                          href="index.html"
+                        >
+                          Switch
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="header-sidebar-item-sub-menu-item"
+                          href="index.html"
+                        >
+                          Tool
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="header-sidebar-menu-item">
+                    <div class="header-sidebar-menu-item-click">
+                      <div class="header-sidebar-menu-item-click-left">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>Giỏ hàng</span>
+                      </div>
+                      <div class="header-sidebar-menu-item-click-right">
+                        <i class="fa-solid fa-plus show"></i>
+                        <i class="fa-solid fa-minus"></i>
+                      </div>
+                    </div>
+                    <ul class="header-sidebar-item-sub-menu">
+                      <li>
+                        <a
+                          class="header-sidebar-item-sub-menu-item"
+                          href="index.html"
+                        >
+                          item1
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="header-sidebar-item-sub-menu-item"
+                          href="index.html"
+                        >
+                          item2
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="header-sidebar-menu-item">
+                    <div class="header-sidebar-menu-item-click">
+                      <div class="header-sidebar-menu-item-click-left">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <span>user name</span>
+                      </div>
+                      <div class="header-sidebar-menu-item-click-right">
+                        <i class="fa-solid fa-plus show"></i>
+                        <i class="fa-solid fa-minus"></i>
+                      </div>
+                    </div>
+                    <ul class="header-sidebar-item-sub-menu">
+                      <li>
+                        <a
+                          class="header-sidebar-item-sub-menu-item"
+                          href="index.html"
+                        >
+                          Hồ sơ
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="header-sidebar-item-sub-menu-item"
+                          href="index.html"
+                        >
+                          Cài đặt
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
-
       <main class="grid">
         <div class="top">
           <div class="top-left">
@@ -83,24 +207,83 @@
             </div>
             <div class="carousel">
               <ul class="carousel-images">
-                <li class="carousel-image" style="transition: margin-left 0.3s ease-in-out;">
-                  <img class="active-img" draggable="false"  src="./images/kits/GINKGO65-PRO/1.jpg" />
+                <li
+                  class="carousel-image"
+                  style="transition: margin-left 0.3s ease-in-out"
+                >
+                  <img
+                    class="active-img"
+                    draggable="false"
+                    src="./images/kits/GINKGO65-PRO/1.jpg"
+                  />
                 </li>
                 <li class="carousel-image">
-                  <img  draggable="false" src="./images/kits/GINKGO65-PRO/2.jpg" />
+                  <img
+                    draggable="false"
+                    src="./images/kits/GINKGO65-PRO/2.jpg"
+                  />
                 </li>
 
                 <li class="carousel-image">
-                  <img  draggable="false" src="./images/kits/GINKGO65-PRO/3.jpg" />
+                  <img
+                    draggable="false"
+                    src="./images/kits/GINKGO65-PRO/3.jpg"
+                  />
                 </li>
                 <li class="carousel-image carousel-image-clone">
-                  <img  draggable="false" src="./images/kits/GINKGO65-PRO/4.jpg" />
+                  <img
+                    draggable="false"
+                    src="./images/kits/GINKGO65-PRO/4.jpg"
+                  />
                 </li>
                 <li class="carousel-image carousel-image-clone">
-                  <img  draggable="false" src="./images/kits/GINKGO65-PRO/5.jpg" />
+                  <img
+                    draggable="false"
+                    src="./images/kits/GINKGO65-PRO/5.jpg"
+                  />
                 </li>
                 <li class="carousel-image carousel-image-clone">
-                  <img  draggable="false" src="./images/kits/GINKGO65-PRO/6.jpg" />
+                  <img
+                    draggable="false"
+                    src="./images/kits/GINKGO65-PRO/6.jpg"
+                  />
+                </li>
+
+                <li class="carousel-image carousel-image-clone">
+                  <img
+                    draggable="false"
+                    src="./images/kits/GINKGO65-PRO/7.jpg"
+                  />
+                </li>
+                <li class="carousel-image carousel-image-clone">
+                  <img
+                    draggable="false"
+                    src="./images/kits/GINKGO65-PRO/8.jpg"
+                  />
+                </li>
+                <li class="carousel-image carousel-image-clone">
+                  <img
+                    draggable="false"
+                    src="./images/kits/GINKGO65-PRO/9.jpg"
+                  />
+                </li>
+                <li class="carousel-image carousel-image-clone">
+                  <img
+                    draggable="false"
+                    src="./images/kits/GINKGO65-PRO/10.jpg"
+                  />
+                </li>
+                <li class="carousel-image carousel-image-clone">
+                  <img
+                    draggable="false"
+                    src="./images/kits/GINKGO65-PRO/11.jpg"
+                  />
+                </li>
+                <li class="carousel-image carousel-image-clone">
+                  <img
+                    draggable="false"
+                    src="./images/kits/GINKGO65-PRO/12.jpg"
+                  />
                 </li>
               </ul>
 
@@ -137,9 +320,7 @@
               <b>Tình trạng</b> : Hàng Đặt Trước (có hàng sau 7-10 ngày)
             </div>
             <form class="form-quantity">
-              <label for="top-right-quantity-input">
-                Số lượng :
-              </label>
+              <label for="top-right-quantity-input"> Số lượng : </label>
               <div class="top-right-quantity">
                 <button
                   type="button"
@@ -147,7 +328,13 @@
                 >
                   -
                 </button>
-                <input class="top-right-quantity-input" id="top-right-quantity-input" value="1" type="text" maxlength="3" />
+                <input
+                  class="top-right-quantity-input"
+                  id="top-right-quantity-input"
+                  value="1"
+                  type="text"
+                  maxlength="3"
+                />
                 <button
                   type="button"
                   class="top-right-quantity-button top-right-quantity-button-increase"
@@ -277,7 +464,7 @@
                   <img src="./images/kits/GINKGO65-PRO/6.jpg" />
                   <img src="./images/kits/GINKGO65-PRO/3.jpg" />
                 </div>
-  
+
                 <span class="product-sub-title"> Kit Phím Cơ </span>
                 <h3 class="product-title">GINKGO65 PRO</h3>
                 <div class="product-price">
@@ -286,14 +473,14 @@
                 </div>
               </a>
             </li>
-  
+
             <li>
               <a class="product" href="index.html">
                 <div class="product-wrap-images">
                   <img src="./images/kits/Aurora-x-Zen-Pond/ZenPond_01.jpg" />
                   <img src="./images/kits/Aurora-x-Zen-Pond/ZenPond_07.png" />
                 </div>
-  
+
                 <span class="product-sub-title"> Kit Phím Cơ </span>
                 <h3 class="product-title">Aurora x Zen Pond</h3>
                 <div class="product-price">
@@ -302,14 +489,14 @@
                 </div>
               </a>
             </li>
-  
+
             <li>
               <a class="product" href="index.html">
                 <div class="product-wrap-images">
                   <img src="./images/kits/Ikki68/1.jpg" />
                   <img src="./images/kits/Ikki68/2.jpg" />
                 </div>
-  
+
                 <span class="product-sub-title"> Kit Phím Cơ </span>
                 <h3 class="product-title">Ikki68</h3>
                 <div class="product-price">
@@ -319,90 +506,93 @@
               </a>
             </li>
           </ul>
-        </main>
-        <footer>
-          <div class="footer-inner grid">
-            <div class="column">
+        </div>
+      </main>
+      <footer>
+        <div class="footer-inner grid">
+          <div class="column">
+            <a href="index.html">
               <img
                 class="column-logo"
                 src="./images/logos/logo-black.png"
                 alt="logo"
               />
-              <p class="column-slogan title">
-                Bàn Phím Hoàn Hảo Cho Mọi Cú Click
-              </p>
-            </div>
-            <div class="column">
-              <h3 class="column-title title">Menu</h3>
-              <ul>
-                <li class="column-list-item">
-                  <a href="inde.html">
-                    <i class="fa-solid fa-house"></i>
-                    <span>Trang chủ</span>
-                  </a>
-                </li>
-                <li class="column-list-item">
-                  <a href="cart.html">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span>Giỏ hàng</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="column">
-              <h3 class="column-title title">Mạng xã hội</h3>
-              <ul>
-                <li class="column-list-item">
-                  <a href="https://www.instagram.com/cuongzip2k6/">
-                    <i class="fa-brands fa-square-instagram"></i>
-                    <span>cuognzip2k6</span>
-                  </a>
-                </li>
-                <li class="column-list-item">
-                  <a
-                    href="https://www.facebook.com/profile.php?id=100069563275346"
-                  >
-                    <i class="fa-brands fa-facebook"></i>
-                    <span>Huynh Cuong</span>
-                  </a>
-                </li>
-                <li class="column-list-item">
-                  <a
-                    href="https://www.youtube.com/channel/UCxsq55Bayq0bhLRjBAz6xeA"
-                  >
-                    <i class="fa-brands fa-youtube"></i>
-                    <span>Cường Huỳnh </span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="column">
-              <h3 class="column-title title">Liên lạc</h3>
-              <ul>
-                <li class="column-list-item">
-                  <a href="tel: 000000">
-                    <i class="fa-solid fa-phone"></i>
-                    <span>0349156614</span>
-                  </a>
-                </li>
-                <li class="column-list-item">
-                  <a href="mailto:cuongzip2k6@gmail.com">
-                    <i class="fa-solid fa-envelope"></i>
-                    <span> cuognzip2k6@gmail.com </span>
-                  </a>
-                </li>
-                <li class="column-list-item">
-                  <a href="#">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <span> Phước Thiền, Đồng Nai</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
+            </a>
+            <p class="column-slogan title">
+              Bàn Phím Hoàn Hảo Cho Mọi Cú Click
+            </p>
+          </div>
+          <div class="column">
+            <h3 class="column-title title">Menu</h3>
+            <ul>
+              <li class="column-list-item">
+                <a href="inde.html">
+                  <i class="fa-solid fa-house"></i>
+                  <span>Trang chủ</span>
+                </a>
+              </li>
+              <li class="column-list-item">
+                <a href="cart.html">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <span>Giỏ hàng</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="column">
+            <h3 class="column-title title">Mạng xã hội</h3>
+            <ul>
+              <li class="column-list-item">
+                <a href="https://www.instagram.com/cuongzip2k6/">
+                  <i class="fa-brands fa-square-instagram"></i>
+                  <span>cuognzip2k6</span>
+                </a>
+              </li>
+              <li class="column-list-item">
+                <a
+                  href="https://www.facebook.com/profile.php?id=100069563275346"
+                >
+                  <i class="fa-brands fa-facebook"></i>
+                  <span>Huynh Cuong</span>
+                </a>
+              </li>
+              <li class="column-list-item">
+                <a
+                  href="https://www.youtube.com/channel/UCxsq55Bayq0bhLRjBAz6xeA"
+                >
+                  <i class="fa-brands fa-youtube"></i>
+                  <span>Cường Huỳnh </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="column">
+            <h3 class="column-title title">Liên lạc</h3>
+            <ul>
+              <li class="column-list-item">
+                <a href="tel: 000000">
+                  <i class="fa-solid fa-phone"></i>
+                  <span>0349156614</span>
+                </a>
+              </li>
+              <li class="column-list-item">
+                <a href="mailto:cuongzip2k6@gmail.com">
+                  <i class="fa-solid fa-envelope"></i>
+                  <span> cuognzip2k6@gmail.com </span>
+                </a>
+              </li>
+              <li class="column-list-item">
+                <a href="#">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span> Phước Thiền, Đồng Nai</span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </footer>
     </div>
     <script src="./js/detail.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

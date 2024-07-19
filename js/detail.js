@@ -30,6 +30,9 @@ inputQuantityElement.oninput = (e) => {
     e.target.value = value.slice(1, value.length);
   }
 };
+inputQuantityElement.onblur = (e) => {
+  if (!e.target.value) e.target.value = "1";
+};
 const buttonIncrease = document.querySelector(
   ".top-right-quantity-button-increase"
 );
@@ -49,12 +52,16 @@ buttonReduce.onclick = () => {
 
 let activeIndexImage = 0;
 
+let marginLeft = 0;
+
 const bigImageElement = document.querySelector(".top-left-wrap-big-img img");
 
 const firstImageElement = document.querySelector(
   ".carousel-images .carousel-image:first-child"
 );
 const imagesElement = firstImageElement.parentElement;
+
+let widthImage = imagesElement.clientWidth * 0.25;
 
 const listImageElement = imagesElement.querySelectorAll("img");
 
@@ -65,50 +72,98 @@ const prevBtnElement = document.querySelector(".carousel-btn-left");
 const nextBtnElement = document.querySelector(".carousel-btn-right");
 
 nextBtnElement.onclick = () => {
-  if (activeIndexImage + 1 <= imageCount - 4) {
+  if (activeIndexImage + 1 <= imageCount - 1) {
     activeIndexImage += 1;
-    firstImageElement.style.marginLeft = `-${activeIndexImage * 25}%`;
-    bigImageElement.src = listImageElement[activeIndexImage].src;
-    for (let imageElement of listImageElement) {
-      imageElement.classList.remove("active-img");
+    handleChangeBigImage(activeIndexImage);
+    if (marginLeft - widthImage >= -(widthImage * (imageCount - 4))) {
+      marginLeft -= widthImage;
+      firstImageElement.style.marginLeft = marginLeft + "px";
     }
-    listImageElement[activeIndexImage].classList.add("active-img");
   }
 };
 prevBtnElement.onclick = () => {
   if (activeIndexImage - 1 >= 0) {
     activeIndexImage -= 1;
-    firstImageElement.style.marginLeft = `-${activeIndexImage * 25}%`;
-    bigImageElement.src = listImageElement[activeIndexImage].src;
-    for (let imageElement of listImageElement) {
-      imageElement.classList.remove("active-img");
+
+    handleChangeBigImage(activeIndexImage);
+    console.log(marginLeft, activeIndexImage, imagesElement.clientWidth);
+    if (marginLeft + widthImage <= 0) {
+      marginLeft += widthImage;
+      firstImageElement.style.marginLeft = marginLeft + "px";
     }
-    listImageElement[activeIndexImage].classList.add("active-img");
   }
 };
+for (let i = 0; i < listImageElement.length; i++) {
+  listImageElement[i].onclick = () => {
+    activeIndexImage = i;
+    handleChangeBigImage(activeIndexImage);
+  };
+}
 
-console.log({ imagesElement });
-// const minMarginLeft = em
+const handleChangeBigImage = (index) => {
+  for (let imageElement of listImageElement) {
+    imageElement.classList.remove("active-img");
+  }
+  listImageElement[index].classList.add("active-img");
+  bigImageElement.src = listImageElement[index].src;
+};
+
+let width = 0;
+
+const widthImagesElement = imagesElement.clientWidth;
+
 let isMouseDown = false;
+
 let startX = 0;
-let marginLeft = 0;
+
 imagesElement.onmousedown = (e) => {
   isMouseDown = true;
   startX = e.clientX;
 };
-imagesElement.onmouseup = () => {
+
+document.onmouseup = () => {
   isMouseDown = false;
   firstImageElement.style.transition = "margin-left 0.3s ease-in-out";
+
+  activeIndexImage += -Math.ceil(width / widthImage);
+
+  marginLeft = Math.ceil(marginLeft / widthImage) * widthImage;
+
+  if (marginLeft > 0) {
+    marginLeft = 0;
+    activeIndexImage = 0;
+  } else if (marginLeft < -(widthImage * (imageCount - 4))) {
+    marginLeft = -(widthImage * (imageCount - 4));
+    activeIndexImage = imageCount - 1;
+  }
+
+  firstImageElement.style.marginLeft = marginLeft + "px";
+
+  if (activeIndexImage < 0) {
+    activeIndexImage = 0;
+  } else if (activeIndexImage > imageCount - 1) {
+    activeIndexImage = imageCount - 1;
+  }
+  handleChangeBigImage(activeIndexImage);
+  width = 0;
 };
 imagesElement.onmouseout = () => {
-  isMouseDown = false;
-  firstImageElement.style.transition = "margin-left 0.3s ease-in-out";
+  // isMouseDown = false;
+  // firstImageElement.style.transition = "margin-left 0.3s ease-in-out";
 };
 imagesElement.onmousemove = (e) => {
   if (isMouseDown) {
+    width += e.clientX - startX;
     marginLeft = marginLeft + (e.clientX - startX);
     firstImageElement.style.marginLeft = marginLeft + "px";
     firstImageElement.style.transition = "none";
     startX = e.clientX;
   }
+};
+
+window.onresize = () => {
+  let number = Math.ceil(marginLeft / widthImage);
+  widthImage = imagesElement.clientWidth * 0.25;
+  marginLeft = number * widthImage;
+  firstImageElement.style.marginLeft = marginLeft + "px";
 };

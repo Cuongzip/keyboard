@@ -51,6 +51,30 @@ a{
 .wrapper{
     background-image: linear-gradient(-45deg,#6a9cfd,#ffb8d0);
 }
+/* button style */
+.button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 20px;
+    background-color: var(--bg-color);
+    border-radius: 30px;
+}
+.button:hover{
+    background-color: var(--hover-bg-color);
+}
+.button ~ .button{
+    margin-left: 15px;
+}
+.button span{
+    border-radius: 30px;
+    background-color: var(--primary-color);
+}
+.button i{
+    color: var(--primary-color);
+    margin-left: 10px;
+}
+
 /* header */
 header{
     position: fixed;

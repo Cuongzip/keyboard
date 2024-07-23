@@ -12,7 +12,7 @@
     />
 
     <link rel="stylesheet" href="./styles/main.css" />
-    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/form.css" />
     <link rel="stylesheet" href="./styles/responsive.css" />
     <!-- reset default css -->
     <link
@@ -47,7 +47,7 @@
             </div>
           </div>
           <div class="header-right">
-            <!-- <div class="header-right-item">
+            <div class="header-right-item">
               <span>Danh mục</span>
               <i class="fa-solid fa-list"></i>
               <ul class="header-right-item-popup">
@@ -82,26 +82,7 @@
                   <a> item2 </a>
                 </li>
               </ul>
-            </div> -->
-
-            <a class="header-right-wrap-button" href="sign-in.html">
-              <button
-                style="--bg-color: #ffe699; --hover-bg-color: #e1cc9b"
-                class="button header-right-button"
-              >
-                <span> Đăng nhập </span>
-                <i class="fa-solid fa-arrow-left"></i>
-              </button>
-            </a>
-            <a href="sign-up.html">
-              <button
-                style="--bg-color: #ffb8d0; --hover-bg-color: #f2c2e8"
-                class="button header-right-button"
-              >
-                <span> Đăng ký </span>
-                <i class="fa-solid fa-arrow-right"></i>
-              </button>
-            </a>
+            </div>
           </div>
           <!-- responsive -->
           <div class="header-wrap-sidebar">
@@ -226,176 +207,66 @@
         </div>
       </header>
       <main class="grid">
-        <div class="carousel">
-          <ul class="carousel-images">
-            <li
-              style="margin-left: -100%; transition: all 0.4s ease-in-out"
-              class="carousel-image carousel-image-clone"
+        <div class="main-inner">
+          <div class="main-inner-left">
+            <div class="main-inner-left-wrap-title">
+              <h2>Đăng ký</h2>
+              <span>Bước vào thế giới mới chỉ với một click. </span>
+            </div>
+            <div class="main-inner-left-buttons">
+              <button class="main-inner-left-button">
+                Đăng ký với
+                <img src="./images/icons/gg.webp" />
+              </button>
+              <button class="main-inner-left-button">
+                Đăng ký với
+                <img src="./images/icons/fb.jpg" />
+              </button>
+            </div>
+            <div class="main-inner-left-separate">
+              <span class="main-inner-left-separate-text">hoặc</span>
+            </div>
+            <form id="form-sign-up" class="form">
+              <div class="form-group">
+                <label for="name">Tên</label>
+                <input name="name" id="name" placeholder="Nhập tên của bạn" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  name="email"
+                  id="email"
+                  placeholder="Nhập email của bạn"
+                />
+              </div>
+              <div class="form-group">
+                <label for="password">Mật khẩu</label>
+                <input
+                  name="password"
+                  id="password"
+                  placeholder="Nhập mật khẩu email của bạn"
+                />
+              </div>
+              <div class="form-group-checkbox">
+                <input type="checkbox" />
+                <label>Tôi chấp nhận các chính sách bảo mật</label>
+              </div>
+              <button type="submit" class="form-button">Đăng ký</button>
+            </form>
+            <div class="main-inner-left-footer">
+              Nếu bạn đã có tài khoản, <a href="sign-in.html">đăng nhập</a>
+            </div>
+          </div>
+          <div class="main-inner-right">
+            <img
+              class="main-inner-right-img"
+              src="images/banner/banner-10.jpg"
+            />
+            <span class="main-inner-right-text"
+              >Phím cơ hoàn hảo, trải nghiệm tuyệt vời.</span
             >
-              <img src="./images/banner/banner-8.jpg" />
-            </li>
-            <li class="carousel-image">
-              <img src="./images/banner/banner-1.jpg" />
-            </li>
-            <li class="carousel-image">
-              <img src="./images/banner/banner-2.jpg" />
-            </li>
-            <li class="carousel-image">
-              <img src="./images/banner/banner-3.jpg" />
-            </li>
-            <li class="carousel-image">
-              <img src="./images/banner/banner-4.jpg" />
-            </li>
-            <li class="carousel-image">
-              <img src="./images/banner/banner-5.jpg" />
-            </li>
-            <li class="carousel-image">
-              <img src="./images/banner/banner-6.jpg" />
-            </li>
-            <li class="carousel-image">
-              <img src="./images/banner/banner-7.jpg" />
-            </li>
-            <li class="carousel-image">
-              <img src="./images/banner/banner-8.jpg" />
-            </li>
-            <li class="carousel-image carousel-image-clone">
-              <img src="./images/banner/banner-1.jpg" />
-            </li>
-          </ul>
-
-          <button class="carousel-btn carousel-btn-left">
-            <i class="fa-solid fa-chevron-left"></i>
-          </button>
-          <button class="carousel-btn carousel-btn-right">
-            <i class="fa-solid fa-chevron-right"></i>
-          </button>
-          <ul class="carousel-dots"></ul>
+          </div>
         </div>
-        <!-- nav bar -->
-        <nav>
-          <ul class="body-nav">
-            <li class="body-nav-item">
-              <a class="active" href="index.html">Keyboards</a>
-            </li>
-            <li class="body-nav-item">
-              <a href="index.html"> Keycap </a>
-            </li>
-            <li class="body-nav-item">
-              <a href="index.html"> Kits </a>
-            </li>
-          </ul>
-        </nav>
-        <!-- product -->
-        <ul class="products">
-          <li>
-            <a class="product" href="detail.html">
-              <div class="product-wrap-images">
-                <img src="./images/kits/GINKGO65-PRO/6.jpg" />
-                <img src="./images/kits/GINKGO65-PRO/3.jpg" />
-              </div>
-
-              <span class="product-sub-title"> Kit Phím Cơ </span>
-              <h3 class="product-title">GINKGO65 PRO</h3>
-              <div class="product-price">
-                <span class="product-price-sale"> $259.00 </span>
-                <span class="product-price-origin"> $299.00 </span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a class="product" href="detail.html">
-              <div class="product-wrap-images">
-                <img src="./images/kits/Maze-64/white_black_1.jpg" />
-                <img src="./images/kits/Maze-64/white_1_1.jpg" />
-              </div>
-
-              <span class="product-sub-title"> Kit Phím Cơ </span>
-              <h3 class="product-title">Maze 64</h3>
-              <div class="product-price">
-                <span class="product-price-sale"> $115.00 </span>
-                <span class="product-price-origin"> $120.00 </span>
-              </div>
-            </a>
-
-            <!-- <div class="product-footer">
-              <div class="product-footer-evaluate">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-              </div>
-              <div class="product-footer-like">
-                <span>Yêu thích</span>
-                <div class="product-footer-like-icons">
-                  <i class="fa-regular fa-heart"></i>
-                  <i class="fa-solid fa-heart"></i>
-                </div>
-              </div>
-            </div> -->
-          </li>
-
-          <li>
-            <a class="product" href="detail.html">
-              <div class="product-wrap-images">
-                <img src="./images/kits/Aurora-x-Zen-Pond/ZenPond_01.jpg" />
-                <img src="./images/kits/Aurora-x-Zen-Pond/ZenPond_07.png" />
-              </div>
-
-              <span class="product-sub-title"> Kit Phím Cơ </span>
-              <h3 class="product-title">Aurora x Zen Pond</h3>
-              <div class="product-price">
-                <span class="product-price-sale">$210.00 </span>
-                <span class="product-price-origin"> $220.00 </span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a class="product" href="detail.html">
-              <div class="product-wrap-images">
-                <img src="./images/kits/Promise87-Bespoke-Edition/Red_6.jpg" />
-                <img src="./images/kits/Promise87-Bespoke-Edition/Red_7.jpg" />
-              </div>
-
-              <span class="product-sub-title"> Kit Phím Cơ </span>
-              <h3 class="product-title">Promise87 Bespoke Edition</h3>
-              <div class="product-price">
-                <span class="product-price-sale">$540.00 </span>
-                <span class="product-price-origin">$580.00 </span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a class="product" href="detail.html">
-              <div class="product-wrap-images">
-                <img src="./images/kits/Balance/q5b94I9.jpg" />
-                <img src="./images/kits/Balance/5CCXvP4.jpg" />
-              </div>
-
-              <span class="product-sub-title"> Kit Phím Cơ </span>
-              <h3 class="product-title">Balance</h3>
-              <div class="product-price">
-                <span class="product-price-sale">$465.00</span>
-                <span class="product-price-origin"> $500.00 </span>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a class="product" href="detail.html">
-              <div class="product-wrap-images">
-                <img src="./images/kits/Ikki68/1.jpg" />
-                <img src="./images/kits/Ikki68/2.jpg" />
-              </div>
-
-              <span class="product-sub-title"> Kit Phím Cơ </span>
-              <h3 class="product-title">Ikki68</h3>
-              <div class="product-price">
-                <span class="product-price-sale">$279.00</span>
-                <span class="product-price-origin">$299.00 </span>
-              </div>
-            </a>
-          </li>
-        </ul>
       </main>
       <footer>
         <div class="footer-inner grid">

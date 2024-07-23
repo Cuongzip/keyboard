@@ -1,0 +1,138 @@
+.main-inner{
+    margin-top: 30px;
+    border-radius: 30px;
+    padding: 20px;
+    background-color: var(--primary-color);
+    display: flex;
+
+}
+
+.main-inner-left{
+    flex: 1;
+    padding: 50px 0 50px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-inner-left-wrap-title h2{
+    font-size: 3rem;
+    margin-bottom: 18px;
+}
+.main-inner-left-separate{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+    color: rgba(0, 0, 0, 0.5);
+}
+.main-inner-left-separate-text{
+    margin: 0 6px;
+}
+.main-inner-left-separate::after , .main-inner-left-separate::before{
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color:rgba(0, 0, 0, 0.2) ;
+}
+.form{
+    width: 100%;
+}
+.main-inner-left-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 30px 0;
+}
+.main-inner-left-button{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 6px 0;
+}
+.main-inner-left-button img{
+   width: 25px;
+   height: 25px;
+   margin-left: 10px;
+}
+.main-inner-left-button ~ .main-inner-left-button{
+    margin-left: 20px;
+}
+.form-group{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+.form-group label{
+    margin-bottom: 8px;
+
+}
+.form-group input{
+    margin-bottom: 8px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    border:1px solid rgba(0, 0, 0, 0.2) ;
+}
+
+.form-group input:focus{
+    box-shadow: 0 0 6px rgba(0, 83, 249, 0.5);
+    outline: none;
+}
+
+
+.form-group-checkbox{
+    display: flex;
+    margin-bottom: 20px;
+}
+.form-group-checkbox input{
+   
+    margin-right: 10px;
+}
+.form-button{
+    width: 100%;
+    align-items: center;
+    background-color: #4556f3;
+    color: var(--primary-color);
+    padding: 10px 0;
+    border-radius: 10px;
+}
+.form-button:hover{
+    background-color: #6a9cfd;
+}
+.main-inner-left-footer{
+    margin-top: 30px;
+}
+.main-inner-left-footer a{
+    color: #6a9cfd;
+}
+.main-inner-right{
+    flex: 1.2;
+   
+}
+.main-inner-right{
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    margin-left: 30px;
+}
+.main-inner-right-img{
+    height: 100%;
+    width: auto;
+    transition: transform 0.3s ease-in-out;
+}
+.main-inner-right-img:hover{
+    transform: scale(1.1);
+}
+.main-inner-right-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 2.8rem;
+    line-height: 40px;
+    font-weight: 500;
+    color: var(--primary-color);
+}

@@ -9,6 +9,9 @@
     .top-right{
         margin-top: 20px;
     }
+    .main-inner-right{
+        display: none;
+    }
 }
 
 /* mobile */

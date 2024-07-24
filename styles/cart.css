@@ -1,0 +1,117 @@
+.top,.order{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1.7rem;
+}
+.top{
+    font-size: 1.9rem;
+}
+
+.big-cell{
+    flex: 3;
+    display: flex;
+}
+.cell{
+    flex: 1;
+    text-align: center;
+}
+.checkbox-all,.big-cell-checkbox{
+    margin-right: 15px;
+}
+.order{
+    margin: 20px 0;
+    padding: 30px 20px;
+}
+.product-summary{
+    display: flex;
+}
+.product-summary-img{
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+    border-radius: 10px;
+}
+.product-summary-right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-width: 260px;
+}
+.product-summary-right-name{
+    font-size: 1.9rem;
+}
+.product-summary-right-commit{
+    font-size: 1.3rem;
+    line-height: 18px;
+    padding: 0 5px;
+    color: red;
+    border: 1px solid red;
+    margin-top: 10px;
+}
+
+.total{
+    color: #ee4d2d;
+}
+
+.product-summary-right-footer{
+    display: none;
+    justify-content: space-between;
+    width: 100%;
+}
+.quantity-small{
+    display: flex;
+    width: 90px;
+
+}
+.quantity-small-input{
+    width: 40%;
+    text-align: center;
+    border: none;
+}
+.quantity-small-button{
+    width: 30%;
+}
+/* pay */
+.pay{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fee5e1;
+    padding: 20px ;
+    border-radius: 10px;
+    box-shadow: 0 0 7px  #aee4ff;
+}
+.pay-left, .pay-right{
+    display: flex;
+    align-items: center;
+}
+.pay-left-check-all{
+    display: flex;
+    margin-right: 15px;
+}
+.pay-right-button{
+    margin-left: 20px;
+}
+/* responsive */
+@media  screen and ( max-width : 1024px) {
+    .top{
+        display: none;
+    }
+    .cell{
+        display: none;
+    }
+   .product-summary-right-footer{
+        display: flex;
+   }
+   .total-orders-selected,.delete-items-selected{
+    display: none;
+   }
+   
+}

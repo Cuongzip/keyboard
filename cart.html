@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyboard</title>
+
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./images/logos/logo-black-circel.png"
+    />
+
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/cart.css" />
+    <link rel="stylesheet" href="./styles/responsive.css" />
+    <!-- reset default css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- icon -->
+    <link
+      href="./icons/fontawesome-free-6.5.2-web/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="header-inner grid">
+          <a class="header-wrap-logo href" href="index.html">
+            <img
+              class="header-logo"
+              src="./images/logos/logo-black.png"
+              alt=""
+            />
+          </a>
+
+          <div class="header-search">
+            <input placeholder="Tìm Kiếm" />
+            <div class="header-search-icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </div>
+          <div class="header-right">
+            <div class="header-right-item">
+              <span>Danh mục</span>
+              <i class="fa-solid fa-list"></i>
+              <ul class="header-right-item-popup">
+                <li>
+                  <a> item1 </a>
+                </li>
+                <li>
+                  <a> item2 </a>
+                </li>
+              </ul>
+            </div>
+            <div class="header-right-item">
+              <span>Giỏ hàng</span>
+              <i class="fa-solid fa-cart-shopping"></i>
+              <ul class="header-right-item-popup">
+                <li>
+                  <a> item1 </a>
+                </li>
+                <li>
+                  <a> item2 </a>
+                </li>
+              </ul>
+            </div>
+            <div class="header-right-item header-right-item-column">
+              <i class="fa-solid fa-circle-user"></i>
+              <span>user name</span>
+              <ul class="header-right-item-popup">
+                <li>
+                  <a> item1 </a>
+                </li>
+                <li>
+                  <a> item2 </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- responsive -->
+          <div class="header-wrap-sidebar">
+            <i class="header-wrap-sidebar-icon fa-solid fa-list"></i>
+            <div class="header-modal">
+              <div class="header-sidebar">
+                <div class="header-sidebar-search">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <input placeholder="Tìm Kiếm" />
+                </div>
+                <ul class="header-sidebar-menu">
+                  <li class="header-sidebar-menu-item">
+                    <div class="header-sidebar-menu-item-click">
+                      <div class="header-sidebar-menu-item-click-left">
+                        <i class="fa-solid fa-list"></i>
+                        <span>Danh mục</span>
+                      </div>
+                      <div class="header-sidebar-menu-item-click-right">
+                        <i class="fa-solid fa-plus show"></i>
+                        <i class="fa-solid fa-minus"></i>
+                      </div>
+                    </div>
+                    <ul class="header-sidebar-item-sub-menu">
+                      <li>
+                        <a
+                          class="header-sidebar-item-sub-menu-item"
+                          href="index.html"
+                        >
+                          Keyboard
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="header-sidebar-item-sub-menu-item"
+                          href="index.html"
+                        >
+                          Keycap
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="header-sidebar-item-sub-menu-item"
+                          href="index.html"
+                        >
+                          Switch
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="header-sidebar-item-sub-menu-item"
+                          href="index.html"
+                        >
+                          Tool
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="header-sidebar-menu-item">
+                    <div class="header-sidebar-menu-item-click">
+                      <div class="header-sidebar-menu-item-click-left">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>Giỏ hàng</span>
+                      </div>
+                      <div class="header-sidebar-menu-item-click-right">
+                        <i class="fa-solid fa-plus show"></i>
+                        <i class="fa-solid fa-minus"></i>
+                      </div>
+                    </div>
+                    <ul class="header-sidebar-item-sub-menu">
+                      <li>
+                        <a
+                          class="header-sidebar-item-sub-menu-item"
+                          href="index.html"
+                        >
+                          item1
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="header-sidebar-item-sub-menu-item"
+                          href="index.html"
+                        >
+                          item2
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="header-sidebar-menu-item">
+                    <div class="header-sidebar-menu-item-click">
+                      <div class="header-sidebar-menu-item-click-left">
+                        <i class="fa-solid fa-circle-user"></i>
+                        <span>user name</span>
+                      </div>
+                      <div class="header-sidebar-menu-item-click-right">
+                        <i class="fa-solid fa-plus show"></i>
+                        <i class="fa-solid fa-minus"></i>
+                      </div>
+                    </div>
+                    <ul class="header-sidebar-item-sub-menu">
+                      <li>
+                        <a
+                          class="header-sidebar-item-sub-menu-item"
+                          href="index.html"
+                        >
+                          Hồ sơ
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          class="header-sidebar-item-sub-menu-item"
+                          href="index.html"
+                        >
+                          Cài đặt
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="grid">
+        <form>
+          <div class="top">
+            <div class="big-cell">
+              <input id="checkbox-all" class="checkbox-all" type="checkbox" />
+              <span>Sản Phẩm</span>
+            </div>
+            <div class="cell">Đơn giá</div>
+            <div class="cell">Số lượng</div>
+            <div class="cell">Số Tiền</div>
+            <div class="cell">Thao tác</div>
+          </div>
+          <div class="list-orders">
+            <div class="order">
+              <div class="big-cell">
+                <input class="big-cell-checkbox" type="checkbox" />
+                <div class="product-summary">
+                  <img
+                    class="product-summary-img"
+                    src="./images/kits/Ikki68/1.jpg"
+                  />
+                  <div class="product-summary-right">
+                    <div class="product-summary-right-header">
+                      <span class="product-summary-right-name">Ikki68</span>
+                      <div class="product-summary-right-commit">
+                        Đổi ý miễn phí 15 ngày
+                      </div>
+                    </div>
+                    <div class="product-summary-right-footer">
+                      <span>₫450.000</span>
+                      <div class="quantity-small">
+                        <button
+                          type="button"
+                          class="quantity-small-button quantity-small-button-reduce"
+                        >
+                          -
+                        </button>
+                        <input
+                          class="quantity-small-input"
+                          id="quantity-small-input"
+                          value="1"
+                          type="text"
+                          maxlength="3"
+                        />
+                        <button
+                          type="button"
+                          class="quantity-small-button quantity-small-button-increase"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cell price">₫450.000</div>
+              <div class="cell">
+                <div class="quantity">
+                  <button
+                    type="button"
+                    class="quantity-button quantity-button-reduce"
+                  >
+                    -
+                  </button>
+                  <input
+                    class="quantity-input"
+                    id="quantity-input"
+                    value="1"
+                    type="text"
+                    maxlength="3"
+                  />
+                  <button
+                    type="button"
+                    class="quantity-button quantity-button-increase"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+
+              <div class="cell total">₫450.000</div>
+              <div class="cell action">Xóa</div>
+            </div>
+          </div>
+          <div class="grid pay">
+            <div class="pay-left">
+              <div class="pay-left-check-all">
+                <input id="checkbox-all" class="checkbox-all" type="checkbox" />
+                <div>
+                  Chọn tất cả sản phẩm <span class="total-orders"> (2) </span>
+                </div>
+              </div>
+              <div class="delete-items-selected">Xóa</div>
+            </div>
+            <div class="pay-right">
+              <div class="pay-right-text">
+                Tổng thanh toán
+                <span class="total-orders-selected">( 0 sản phẩm )</span> :
+                <span class="total-pay"> 0đ </span>
+              </div>
+              <button
+                style="--bg-color: #6a9cfd; --hover-bg-color: #aee4ff"
+                class="button pay-right-button"
+                type="submit"
+              >
+                <span> Mua hàng </span>
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </main>
+      <footer>
+        <div class="footer-inner grid">
+          <div class="column">
+            <a href="index.html">
+              <img
+                class="column-logo"
+                src="./images/logos/logo-black.png"
+                alt="logo"
+              />
+            </a>
+            <p class="column-slogan title">
+              Bàn Phím Hoàn Hảo Cho Mọi Cú Click
+            </p>
+          </div>
+          <div class="column">
+            <h3 class="column-title title">Menu</h3>
+            <ul>
+              <li class="column-list-item">
+                <a href="inde.html">
+                  <i class="fa-solid fa-house"></i>
+                  <span>Trang chủ</span>
+                </a>
+              </li>
+              <li class="column-list-item">
+                <a href="cart.html">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <span>Giỏ hàng</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="column">
+            <h3 class="column-title title">Mạng xã hội</h3>
+            <ul>
+              <li class="column-list-item">
+                <a href="https://www.instagram.com/cuongzip2k6/">
+                  <i class="fa-brands fa-square-instagram"></i>
+                  <span>cuognzip2k6</span>
+                </a>
+              </li>
+              <li class="column-list-item">
+                <a
+                  href="https://www.facebook.com/profile.php?id=100069563275346"
+                >
+                  <i class="fa-brands fa-facebook"></i>
+                  <span>Huynh Cuong</span>
+                </a>
+              </li>
+              <li class="column-list-item">
+                <a
+                  href="https://www.youtube.com/channel/UCxsq55Bayq0bhLRjBAz6xeA"
+                >
+                  <i class="fa-brands fa-youtube"></i>
+                  <span>Cường Huỳnh </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="column">
+            <h3 class="column-title title">Liên lạc</h3>
+            <ul>
+              <li class="column-list-item">
+                <a href="tel: 000000">
+                  <i class="fa-solid fa-phone"></i>
+                  <span>0349156614</span>
+                </a>
+              </li>
+              <li class="column-list-item">
+                <a href="mailto:cuongzip2k6@gmail.com">
+                  <i class="fa-solid fa-envelope"></i>
+                  <span> cuognzip2k6@gmail.com </span>
+                </a>
+              </li>
+              <li class="column-list-item">
+                <a href="#">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span> Phước Thiền, Đồng Nai</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="./js/index.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

@@ -11,7 +11,6 @@
 }
 .carousel{
     position: relative;
-    margin-top: 30px;
     margin-bottom: 60px;
     padding-top: 40%;
 }
@@ -58,6 +57,7 @@
     border-radius: 50%;
     background-color: var(--primary-color);
     margin: 0 5px;
+    cursor: pointer;
 }
 .active-dot{
     background-color: #6a9cfd;

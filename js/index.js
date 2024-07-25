@@ -1,10 +1,10 @@
-// const carouselImageElement = document.querySelector(
+// const carouselImageElement = $(
 //   ".carousel-images .carousel-images-item:first-child"
 // );
 // const carouselImagesElement = carouselImageElement.parentElement;
 // let activeIndex = 1;
 
-// const handleSlide = () => {
+// const handleSlideAuto = () => {
 //   carouselImageElement.style.marginLeft = `-${activeIndex}00%`;
 //   if (activeIndex == carouselImagesElement.childElementCount - 1) {
 //     activeIndex = 0;
@@ -14,15 +14,15 @@
 // };
 // const time = 3000;
 
-// let intervalId = setInterval(handleSlide, time);
+// let intervalId = setInterval(handleSlideAuto, time);
 
 // const handleResetTimeSlide = () => {
 //   clearInterval(intervalId);
-//   intervalId = setInterval(handleSlide, time);
+//   intervalId = setInterval(handleSlideAuto, time);
 // };
 
-// const btnLeftElement = document.querySelector(".carousel-btn-left");
-// const btnRightElement = document.querySelector(".carousel-btn-right");
+// const btnLeftElement = $(".carousel-btn-left");
+// const btnRightElement = $(".carousel-btn-right");
 
 // btnLeftElement.onclick = () => {
 //   if (activeIndex === 0) {
@@ -43,126 +43,112 @@
 //   carouselImageElement.style.marginLeft = `-${activeIndex}00%`;
 //   handleResetTimeSlide();
 // };
+const $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
 
 let activeIndex = 1;
 
-const imagesFirstChildElement = document.querySelector(
-  ".carousel-images .carousel-image:first-child"
-);
+const firstImageElement = $(".carousel-images .carousel-image:first-child");
 
-const imagesElement = imagesFirstChildElement.parentElement;
+const imagesElement = firstImageElement.parentElement;
 
 const imageCount = imagesElement.childElementCount;
 
 const imageCloneElement = imagesElement.querySelectorAll(
   ".carousel-image-clone"
 );
+
+const previousBtnElement = $(".carousel-btn-left");
+
+const nextBtnElement = $(".carousel-btn-right");
+
+const dotsElement = $(".carousel-dots");
+
 ////////////////////////////////
-const dotsElement = document.querySelector(".carousel-dots");
-let dotsText = "";
-for (let i = 0; i < imageCount - 2; i++) {
+let dotsText = '<li class="carousel-dot active-dot"></li>';
+for (let i = 1; i < imageCount - 2; i++) {
   dotsText += ' <li class="carousel-dot"></li>';
 }
 dotsElement.innerHTML = dotsText;
+
 const listDots = dotsElement.querySelectorAll("li");
 
-const handleActiveDot = (activeIndexDot) => {
-  const index = activeIndexDot || activeIndex;
-  for (let dotElement of listDots) {
-    dotElement.classList.remove("active-dot");
+const handleActiveDot = () => {
+  let index = activeIndex - 1;
+
+  if (index < 0) {
+    index = imageCount - 3;
   }
-  listDots[index - 1].classList.add("active-dot");
+  if (index > listDots.length - 1) {
+    index = 0;
+  }
+  dotsElement
+    .querySelector(".carousel-dot.active-dot")
+    .classList.remove("active-dot");
+  listDots[index].classList.add("active-dot");
 };
-handleActiveDot();
+
 //////////////////////
 
-const handleSlide = () => {
-  activeIndex++;
-  if (activeIndex >= imageCount - 1) {
-    setTimeout(() => {
-      imagesFirstChildElement.style.transition = "none";
-      activeIndex = 1;
-      imagesFirstChildElement.style.marginLeft = `-${activeIndex * 100}%`;
-    }, 400);
-    handleActiveDot(1);
-  } else {
-    handleActiveDot();
-  }
-  imagesFirstChildElement.style.marginLeft = `-${activeIndex * 100}%`;
-  imagesFirstChildElement.style.transition = "all 0.4s ease-in-out";
+const handleSlideAuto = () => {
+  ++activeIndex;
+  handleWhenChangeActiveIndex();
 };
-let intervalId = setInterval(handleSlide, 5000);
+const durationInterval = 6000;
+let intervalId = setInterval(handleSlideAuto, durationInterval);
 
-const previousBtnElement = document.querySelector(".carousel-btn-left");
+const loadActiveImage = () => {
+  firstImageElement.style.marginLeft = `-${activeIndex * 100}%`;
+};
 
-const nextBtnElement = document.querySelector(".carousel-btn-right");
+const handleWhenChangeActiveIndex = () => {
+  handleActiveDot();
+  loadActiveImage();
+  // reset time interval
+  clearInterval(intervalId);
+  intervalId = setInterval(handleSlideAuto, durationInterval);
+};
+// events
+Array.from(listDots).forEach((dotElement, index) => {
+  dotElement.onclick = () => {
+    activeIndex = index + 1;
+    handleWhenChangeActiveIndex();
+  };
+});
 
-// const handleSlide = (action, activeIndex) => {
-//   // if (!timeoutId) {
-//   activeIndex += action;
-//   if (activeIndex <= 0) {
-//     setTimeout(() => {
-//       imagesFirstChildElement.style.transition = "none";
-//       activeIndex = action == -1 ? 0 : imageCount - 2;
-//       imagesFirstChildElement.style.marginLeft = `-${activeIndex * 100}%`;
-//     }, 400);
-//     handleActiveDot(action == -1 ? 0 : imageCount - 2);
-//   } else {
-//     handleActiveDot(activeIndex);
-//   }
-//   imagesFirstChildElement.style.marginLeft = `-${activeIndex * 100}%`;
-//   imagesFirstChildElement.style.transition = "all 0.4s ease-in-out";
-//   //   timeoutId = setTimeout(() => {
-//   //     timeoutId = null;
-//   //   }, 400);
-//   // }
-// };
+firstImageElement.ontransitionend = () => {
+  firstImageElement.style.transition = "none";
+  if (activeIndex <= 0) {
+    activeIndex = imageCount - 2;
+    loadActiveImage();
+  }
+  if (activeIndex >= imageCount - 1) {
+    activeIndex = 1;
+    loadActiveImage();
+  }
+  setTimeout(() => {
+    firstImageElement.style.transition = "all 0.4s ease-in-out";
+  }, 0);
+};
+
 let prevBtnTimeoutId = null;
 previousBtnElement.onclick = () => {
-  if (!prevBtnTimeoutId) {
-    if (--activeIndex <= 0) {
-      setTimeout(() => {
-        imagesFirstChildElement.style.transition = "none";
-        activeIndex = imageCount - 2;
-        imagesFirstChildElement.style.marginLeft = `-${activeIndex * 100}%`;
-      }, 400);
-      handleActiveDot(imageCount - 2);
-      handleResetTimeInterval();
-    } else {
-      handleActiveDot();
-      handleResetTimeInterval();
-    }
-    imagesFirstChildElement.style.marginLeft = `-${activeIndex * 100}%`;
-    imagesFirstChildElement.style.transition = "all 0.4s ease-in-out";
-    prevBtnTimeoutId = setTimeout(() => {
-      prevBtnTimeoutId = null;
-    }, 400);
-  }
-};
-let nextBtnTimeoutId = null;
-nextBtnElement.onclick = () => {
   if (!nextBtnTimeoutId) {
-    if (++activeIndex >= imageCount - 1) {
-      setTimeout(() => {
-        imagesFirstChildElement.style.transition = "none";
-        activeIndex = 1;
-        imagesFirstChildElement.style.marginLeft = `-${activeIndex * 100}%`;
-      }, 400);
-      handleActiveDot(1);
-      handleResetTimeInterval();
-    } else {
-      handleActiveDot();
-      handleResetTimeInterval();
-    }
-    imagesFirstChildElement.style.marginLeft = `-${activeIndex * 100}%`;
-    imagesFirstChildElement.style.transition = "all 0.4s ease-in-out";
+    --activeIndex;
+    handleWhenChangeActiveIndex();
     nextBtnTimeoutId = setTimeout(() => {
       nextBtnTimeoutId = null;
     }, 400);
   }
 };
-////////////////////////
-const handleResetTimeInterval = () => {
-  clearInterval(intervalId);
-  intervalId = setInterval(handleSlide, 5000);
+
+let nextBtnTimeoutId = null;
+nextBtnElement.onclick = () => {
+  if (!nextBtnTimeoutId) {
+    ++activeIndex;
+    handleWhenChangeActiveIndex();
+    nextBtnTimeoutId = setTimeout(() => {
+      nextBtnTimeoutId = null;
+    }, 400);
+  }
 };

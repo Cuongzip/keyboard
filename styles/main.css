@@ -58,7 +58,8 @@ a{
     width: 85%;
 }
 .wrapper{
-    background-image: linear-gradient(-45deg,#6a9cfd,#ffb8d0);
+    background-image:url("../images/gif/star-4.gif"), linear-gradient(-45deg,#6a9cfd,#ffb8d0);
+    background-size: 16.66666667% auto, auto;
 }
 /* button style */
 .button{
@@ -138,6 +139,7 @@ header{
 }
 .header-search input:focus{
     outline: none;
+    box-shadow: none;
 }
 .header-search-icon{
     font-size: 2rem;
@@ -259,7 +261,7 @@ header{
     padding: 20px 0;
     border: 0 solid var(--primary-color);
     border-left-width:1px ;
-    animation: outToIn 0.25s ease-in-out;
+    animation: outToIn 0.4s ease-in-out;
 }
 
 .header-sidebar-search{
@@ -296,7 +298,7 @@ header{
     color: grey;
     cursor: pointer;
     border-radius: 10px;
-    padding: 0 15px;
+    padding: 4px 15px;
 }
 .header-sidebar-menu-item-click:hover{
     background-color: #ffbfb3 ;
@@ -308,20 +310,28 @@ header{
 .header-sidebar-menu-item-click-left i{
     margin-right: 10px;
 }
-.header-sidebar-menu-item-click-right i{
-    display: none;
+.header-sidebar-menu-item-click-right{
+    font-size: 2rem;
+    transition: all 0.2s ease ;
+}
+.rotate-90{
+    transform: rotate(90deg);
 }
 
-.header-sidebar-item-sub-menu{
-    display: none;
-    margin: 10px 0;
+.header-sidebar-item-wrap-sub-menu{
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
 }
+
+
 .header-sidebar-item-sub-menu-item{
     font-size: 1.7rem;
     color: grey;
     padding: 3px 25px;
     width: 100%;
 }
+
 /* body */
 main{
     padding-top: calc(var(--header-height) + 30px);

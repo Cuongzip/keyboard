@@ -239,7 +239,7 @@
                       <div class="quantity-small">
                         <button
                           type="button"
-                          class="quantity-small-button quantity-small-button-reduce"
+                          class="quantity-small-button reduce"
                         >
                           -
                         </button>
@@ -252,7 +252,7 @@
                         />
                         <button
                           type="button"
-                          class="quantity-small-button quantity-small-button-increase"
+                          class="quantity-small-button increase"
                         >
                           +
                         </button>
@@ -264,10 +264,7 @@
               <div class="cell price">₫450.000</div>
               <div class="cell">
                 <div class="quantity">
-                  <button
-                    type="button"
-                    class="quantity-button quantity-button-reduce"
-                  >
+                  <button type="button" class="quantity-button reduce">
                     -
                   </button>
                   <input
@@ -402,7 +399,13 @@
         </div>
       </footer>
     </div>
-    <script src="./js/index.js"></script>
     <script src="./js/main.js"></script>
+    <script type="module">
+      import { handleQuantity } from "./js/components/index.js";
+      const quantityElement = document.querySelector(".quantity");
+      const quantitySmallElement = document.querySelector(".quantity-small");
+      handleQuantity(quantityElement);
+      handleQuantity(quantitySmallElement);
+    </script>
   </body>
 </html>

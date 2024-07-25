@@ -1,19 +1,17 @@
-const listNavItemElement = document.querySelectorAll(".product-tabs-nav-item");
-const listTadElement = document.querySelectorAll(".tab");
-let activeIndexTad = 0;
+const $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
 
-for (let navItemElement of listNavItemElement) {
-  navItemElement.onclick = (e) => {
-    for (let navItemElement of listNavItemElement) {
-      navItemElement.classList.remove("product-tabs-nav-item-active");
-    }
-    for (let tadElement of listTadElement) {
-      tadElement.classList.remove("show");
-    }
-    e.target.classList.add("product-tabs-nav-item-active");
-    listTadElement[e.target.getAttribute("data-tab-index")].classList.add(
-      "show"
+const listNavItemElement = $$(".product-tabs-nav-item");
+const listTadElement = $$(".tab");
+
+for (let i = 0; i < listNavItemElement.length; i++) {
+  listNavItemElement[i].onclick = () => {
+    $(".product-tabs-nav-item-active").classList.remove(
+      "product-tabs-nav-item-active"
     );
+    $(".tab.show").classList.remove("show");
+    listNavItemElement[i].classList.add("product-tabs-nav-item-active");
+    listTadElement[i].classList.add("show");
   };
 }
 
@@ -23,27 +21,26 @@ let activeIndexImage = 0;
 
 let marginLeft = 0;
 
-const bigImageElement = document.querySelector(".top-left-wrap-big-img img");
+const bigImageElement = $(".top-left-wrap-big-img img");
 
-const firstImageElement = document.querySelector(
-  ".carousel-images .carousel-image:first-child"
-);
+const firstImageElement = $(".carousel-images .carousel-image:first-child");
+
 const imagesElement = firstImageElement.parentElement;
 
 let widthImage = imagesElement.clientWidth * 0.25;
 
-const listImageElement = imagesElement.querySelectorAll("img");
+const listImagesElement = imagesElement.querySelectorAll("img");
 
 const imageCount = imagesElement.childElementCount;
 
-const prevBtnElement = document.querySelector(".carousel-btn-left");
+const prevBtnElement = $(".carousel-btn-left");
 
-const nextBtnElement = document.querySelector(".carousel-btn-right");
+const nextBtnElement = $(".carousel-btn-right");
 
 nextBtnElement.onclick = () => {
   if (activeIndexImage + 1 <= imageCount - 1) {
     activeIndexImage += 1;
-    handleChangeBigImage(activeIndexImage);
+    handleWhenChangeActiveIndex(activeIndexImage);
     if (marginLeft - widthImage >= -(widthImage * (imageCount - 4))) {
       marginLeft -= widthImage;
       firstImageElement.style.marginLeft = marginLeft + "px";
@@ -54,32 +51,31 @@ prevBtnElement.onclick = () => {
   if (activeIndexImage - 1 >= 0) {
     activeIndexImage -= 1;
 
-    handleChangeBigImage(activeIndexImage);
-    console.log(marginLeft, activeIndexImage, imagesElement.clientWidth);
+    handleWhenChangeActiveIndex(activeIndexImage);
+
     if (marginLeft + widthImage <= 0) {
       marginLeft += widthImage;
       firstImageElement.style.marginLeft = marginLeft + "px";
     }
   }
 };
-for (let i = 0; i < listImageElement.length; i++) {
-  listImageElement[i].onclick = () => {
+
+for (let i = 0; i < listImagesElement.length; i++) {
+  listImagesElement[i].onclick = () => {
     activeIndexImage = i;
-    handleChangeBigImage(activeIndexImage);
+    handleWhenChangeActiveIndex(activeIndexImage);
   };
 }
 
-const handleChangeBigImage = (index) => {
-  for (let imageElement of listImageElement) {
+const handleWhenChangeActiveIndex = (index) => {
+  for (let imageElement of listImagesElement) {
     imageElement.classList.remove("active-img");
   }
-  listImageElement[index].classList.add("active-img");
-  bigImageElement.src = listImageElement[index].src;
+  listImagesElement[index].classList.add("active-img");
+  bigImageElement.src = listImagesElement[index].src;
 };
 
 let width = 0;
-
-const widthImagesElement = imagesElement.clientWidth;
 
 let isMouseDown = false;
 
@@ -113,13 +109,10 @@ document.onmouseup = () => {
   } else if (activeIndexImage > imageCount - 1) {
     activeIndexImage = imageCount - 1;
   }
-  handleChangeBigImage(activeIndexImage);
+  handleWhenChangeActiveIndex(activeIndexImage);
   width = 0;
 };
-imagesElement.onmouseout = () => {
-  // isMouseDown = false;
-  // firstImageElement.style.transition = "margin-left 0.3s ease-in-out";
-};
+
 imagesElement.onmousemove = (e) => {
   if (isMouseDown) {
     width += e.clientX - startX;
@@ -136,3 +129,8 @@ window.onresize = () => {
   marginLeft = number * widthImage;
   firstImageElement.style.marginLeft = marginLeft + "px";
 };
+
+// quantity
+import { handleQuantity } from "./components/index.js";
+const quantityElement = $(".quantity");
+handleQuantity(quantityElement);

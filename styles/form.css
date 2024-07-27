@@ -35,6 +35,7 @@
 }
 .form{
     width: 100%;
+    margin-top: 20px;
 }
 .main-inner-left-buttons{
     display: flex;
@@ -60,22 +61,19 @@
     margin-left: 20px;
 }
 .form-group{
-    margin: 20px 0;
     display: flex;
     flex-direction: column;
+    margin-bottom: 5px;
 }
 .form-group label{
     margin-bottom: 8px;
 
 }
 .form-group input{
-    margin-bottom: 8px;
     padding: 8px 10px;
     border-radius: 10px;
     border:1px solid rgba(0, 0, 0, 0.2) ;
 }
-
-
 
 
 .form-group-checkbox{
@@ -83,7 +81,6 @@
     margin-bottom: 20px;
 }
 .form-group-checkbox input{
-   
     margin-right: 10px;
 }
 .form-button{
@@ -93,10 +90,19 @@
     color: var(--primary-color);
     padding: 10px 0;
     border-radius: 10px;
+    margin-top: 10px;
 }
 .form-button:hover{
     background-color: #6a9cfd;
 }
+.message-error{
+    color: red;
+    line-height: 23px;
+    height: 23px;
+    font-size: 1.5rem;
+}
+
+
 .main-inner-left-footer{
     margin-top: 30px;
 }

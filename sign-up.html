@@ -353,6 +353,7 @@
               <div class="form-group">
                 <label for="name">Tên</label>
                 <input name="name" id="name" placeholder="Nhập tên của bạn" />
+                <span class="message-error"></span>
               </div>
               <div class="form-group">
                 <label for="email">Email</label>
@@ -361,6 +362,7 @@
                   id="email"
                   placeholder="Nhập email của bạn"
                 />
+                <span class="message-error"></span>
               </div>
               <div class="form-group">
                 <label for="password">Mật khẩu</label>
@@ -368,11 +370,14 @@
                   name="password"
                   id="password"
                   placeholder="Nhập mật khẩu email của bạn"
+                  type="password"
+                  autocomplete="true"
                 />
+                <span class="message-error"></span>
               </div>
               <div class="form-group-checkbox">
-                <input type="checkbox" />
-                <label>Tôi chấp nhận các chính sách bảo mật</label>
+                <input id="policy" type="checkbox" />
+                <label for="policy">Tôi chấp nhận các chính sách bảo mật</label>
               </div>
               <button type="submit" class="form-button">Đăng ký</button>
             </form>
@@ -475,7 +480,26 @@
         </div>
       </footer>
     </div>
-    <script src="./js/index.js"></script>
+
     <script src="./js/main.js"></script>
+    <script type="module">
+      import { validator, rules } from "./js/components/index.js";
+      validator({
+        selectorForm: "#form-sign-up",
+        selectorMessage: ".message-error",
+        options: {
+          "#name": [rules.required("Vui lòng nhập tên của bạn")],
+          "#email": [
+            rules.required("Vui lòng nhập email của bạn"),
+            rules.isEmail("Vui lòng nhập email chính xác"),
+          ],
+          "#password": [
+            rules.required("Vui lòng nhập mật khẩu"),
+            rules.handleMinLength("Độ dài tối thiểu là 9 kí tự", 9),
+          ],
+          "#policy": "",
+        },
+      });
+    </script>
   </body>
 </html>
